@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+/* download */
+.download{width: 100%; height: 800px; background: #f9b234;}
+.download article{position: relative; z-index: 2;}
+
+/* pic */
+.download .pic{position: absolute; top: 50%; right: 5%; width: 50%; height: 800px; margin-top: 20px; background: url(../img/img_download_pic.png) no-repeat center / contain;}
+
+/* content */
+.download .content{position: absolute; margin: 280px 0 0 120px;}
+.download h1{margin-bottom: 50px; color: #fff;}
+.download a{position: relative; display: block; width: 300px; height: 60px; padding: 17px 0 0 40px; margin: 15px 0 30px 30px; background: #fff; border-radius: 50px; text-align: center; text-transform: uppercase; font: 24px 'Play', sans-serif; color: #979797; transition: all 0.3s;}
+.download a:hover{transform: scale(1.1); color: black;}
+.download img{position: absolute; top: 50%; left: 40px; transform: translateY(-50%); width: 30px; height: auto;}
+
+/* down_bg */
+.down_bg {width: 100%; height: 100%; position: relative;}
+
+/* down_bg - triangle */
+.triangle {position: absolute; height: 30px; width: 55px;}
+.triangle svg {fill: #36a9e0; stroke: #fff; stroke-miterlimit: 10; stroke-width: 8; stroke-linecap: round;}
+.triangle-bottom-middle {top: 13%; left: 35%;}
+.triangle-bottom-middle svg {fill: #e58390;}
+.triangle-bottom-left {bottom: 10%; right: 45%;}
+.ra-triangle {height: 40px; width: 40px; position: absolute;}
+.ra-right {bottom: 18%; right: 7%;}
+.ra-right .bg {fill: #e53329; transform-origin: 100% 100%; animation-name: growtriangle; animation-duration: 2s; animation-iteration-count: infinite; animation-direction: linear; animation-delay: 0s; animation-timing-function: linear;}
+.ra-right .line {fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 8; stroke-linecap: round;}
+.ra-top {bottom: 40%; left: 18%;}
+.ra-top .bg {fill: #2fad66; transform-origin: 0% 0%; animation-name: growtriangle; animation-duration: 2s; animation-iteration-count: infinite; animation-direction: linear; animation-delay: 0s; animation-timing-function: linear;}
+.ra-top .line {fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 8; stroke-linecap: round;}
+@keyframes growtriangle {
+  0% {transform: scale(0, 0);}
+  20% {transform: scale(1, 1);}
+  100% {transform: rotate(1, 1);}
+}
+
+/* down_bg - cross */
+.cross {position: absolute; width: 40px; height: 40px; animation-name: spin; animation-duration: 2s; animation-iteration-count: infinite; animation-direction: linear; animation-delay: 1s; animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);}
+.cross:before {content: ''; position: absolute; height: 40px; width: 4px; border-radius: 2px; position: absolute; top: 50%; margin-top: -20px; left: 50%; margin-left: -2px; background-color: #fff;}
+.cross:after {content: ''; position: absolute; top: 50%; left: 50%; width: 40px; height: 4px; border-radius: 2px; margin-top: -2px; margin-left: -20px; background-color: #fff;}
+.cross-left {top: 225px; right: 10%; animation-delay: 2s; animation-name: spin2; transform: rotate(45deg);}
+.cross-right {top: 65px; left: 15%;}
+.cross-bottom{bottom: 14%; left: 10%;}
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(-90deg);}
+  100% {transform: rotate(-90deg);}
+}
+@keyframes spin2 {
+  0% {transform: rotate(45deg);}
+  50% {transform: rotate(135deg);}
+  100% {transform: rotate(135deg);}
+}
+
+/* down_bg - diagonal line */
+.longdiag line {fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 4; stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: -100; animation-name: linepush; animation-duration: 2s; animation-iteration-count: infinite; animation-direction: linear; animation-delay: 0s; animation-timing-function: ease;}
+.longdiag .first {animation-delay: 0s;}
+.longdiag .second {animation-delay: 1s;}
+.longdiag-right {height: 50px; width: 50px; position: absolute; bottom: 20%; left: 35%; transform: rotate(180deg);}
+.longdiag-left {height: 50px; width: 50px; position: absolute; top: 8%; right: 27%;}
+.longdiag-veryright {height: 50px; width: 50px; position: absolute; top: 40%; left: 5%;}
+.longdiag-veryright .first {animation-delay: 0.5s;}
+.longdiag-veryright .second {animation-delay: 1.5s;}
+@keyframes linepush {
+  0% {stroke-dasharray: 100; stroke-dashoffset: -100;}
+  25% {stroke-dasharray: 100; stroke-dashoffset: -20;}
+  50% {stroke-dasharray: 500; stroke-dashoffset: -30;}
+  75% {stroke-dasharray: 100; stroke-dashoffset: 100;}
+  100% {stroke-dasharray: 100; stroke-dashoffset: 100;}
+}

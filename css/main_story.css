@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+.story{height: 600px; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/img_story_bg_01.png); color: white; text-align: center;}
+.story article{position: relative; width: 100%; width: 1280px; height: 100%;}
+
+.story h2{position: absolute; top: 60px; left: 50%; transform: translateX(-50%); font-size: 16px; letter-spacing: 3px;}
+.story h2:after{position: absolute; left: 50%; transform: translateX(-50%); content: ''; display: block; width: 50px; margin-top: 20px; border-bottom: 1px solid rgba(151, 151, 151, 0.8);}
+
+.rolling{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 90px; overflow:hidden;}
+.rolling_list{position:relative; width:100%; height:auto;}
+.rolling:after{position: absolute; top: 33%; left: 19%; transform: translateY(-50%); content: url(../img/img_story_quote_left.png);}
+.rolling:before{position: absolute; top: 33%; right: 19%; transform: translateY(-50%); content: url(../img/img_story_quote_right.png);}
+
+.story span{font-size: 34px; font-weight: normal; letter-spacing: 5px;}
+.story p{margin-top: 10px; font-size: 18px; color: rgba(255,255,255,0.7);}

@@ -1,0 +1,49 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR|Play');
+
+/* reset */
+* {margin: 0; padding: 0; border: 0; box-sizing: border-box;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display: block;}
+ol, ul{list-style: none;}
+a:link, a:active, a:visited, a:focus {text-decoration: none; color: inherit;}
+a img{border: 0;}
+img{vertical-align: middle;}
+
+/* total layout*/
+body{width: 100%; font-family: 'Noto Sans KR', sans-serif; color: inherit;}
+header{position: fixed; top: 0; width: 100%; z-index: 3; background: white; border-bottom: 1px solid #ededed;}
+footer{position: relative; width: 100%; height: 280px; font-size: 14px;}
+
+/* 공통 속성 */
+article{width: 1280px; margin: 0 auto;}
+h1{font-size: 40px; font-weight: normal;}
+h2{font: 20px 'Play', 'Noto Sans KR'; text-transform: uppercase;}
+span{font-weight: bold;}
+
+/* header */
+.inner_header{position: relative; width: 1280px; height: 80px; margin: 0 auto;}
+.logo{position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 70px; height: 70px; margin-left: 40px; background: url(../img/img_logo.png) no-repeat center / contain;}
+.logo a{padding: 40px 20px; color: transparent;}
+.gnb{position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: 40%; font-family: 'Play', sans-serif;}
+.gnb li{float: left; width: 25%; text-align: center; text-transform: uppercase;}
+.gnb a{position: relative; display: inline-block; padding: 10px 20px;}
+.gnb a:after{content: ''; display: block; width: 0; height: 2px; background: #f9b234; transition: all 0.3s;}
+.gnb a:hover, .gnb a:focus{color: #f9b234;}
+.gnb a:hover:after{width: 100%;}
+
+/* footer */
+.lnb{position: absolute; top: 25px; left: 50%; transform: translateX(-50%); width: 1280px; margin: 0 auto;}
+.lnb li{float: left; width: 25%; text-align: center;}
+.lnb a{position: relative; display: inline-block; padding: 10px 40px;}
+.lnb a:after{content: ''; display: block; width: 0; height: 2px; background: #f9b234; transition: all 0.3s;}
+.lnb a:hover, .lnb li a:focus{color: #f9b234;}
+.lnb a:hover:after{width: 100%;}
+
+.info{position: absolute; top: 32%; left: 50%; transform: translateX(-50%); width: 1280px; margin: 0 40px; font-size: 12px;}
+.info li{margin-bottom: 10px;}
+.info li:last-child{margin-bottom: 0;}
+.inner_info{float: left; width: 33.3333%;}
+.inner_info .title{float: left; width: 40%; padding-left: 15px; color: #979797; border-left: 1px solid #ededed;}
+.inner_info .content{float: left; width: 55%;}
+
+.copy{position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); font-family: 'Play', 'Noto Sans KR'; color: #979797;}
